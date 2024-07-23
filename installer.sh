@@ -105,36 +105,6 @@ server {
     }
 }
 
-server {
-    listen 443 ssl;
-    server_name rocket.app;
-
-    root /var/www/html;
-    index index.php index.html index.htm;
-
-    ssl_certificate /etc/nginx/ssl/certificate.crt;
-    ssl_certificate_key /etc/nginx/ssl/private.key;
-
-    ssl_protocols TLSv1.2 TLSv1.3;
-    ssl_ciphers HIGH:!aNULL:!MD5;
-    ssl_prefer_server_ciphers on;
-
-    location / {
-        try_files $uri $uri/ /index.php?$query_string;
-    }
-
-    location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php8.1-fpm.sock;
-        fastcgi_param PHP_VALUE "memory_limit=4096M";
-        fastcgi_param IONCUBE "/usr/local/ioncube/ioncube_loader_lin_8.1.so";
-        fastcgi_param PHP_ADMIN_VALUE "zend_extension=/usr/local/ioncube/ioncube_loader_lin_8.1.so";
-    }
-
-    location ~ /\.ht {
-        deny all;
-    }
-}
 EOF
     sudo ln -s /etc/nginx/sites-available/rocket /etc/nginx/sites-enabled/
     sudo rm  /var/www/html/index.nginx-debian.html 

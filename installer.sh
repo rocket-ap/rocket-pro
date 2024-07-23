@@ -179,17 +179,22 @@ setup_project_files() {
     APP_LINK="https://api.github.com/repos/rocket-ap/rocket-pro/releases/latest"
     APP_LINK=$(sudo curl -Ls "$APP_LINK" | grep '"browser_download_url":' | sed -E 's/.*"([^"]+)".*/\1/')
 
-    APP_PATH="/var/www/html/app.zip"
+    ZIP_PATH="/var/www/html/app.zip"
   
-    sudo wget -O $APP_PATH $APP_LINK
+    sudo wget -O $ZIP_PATH $APP_LINK
     wait
-    sudo unzip -o $APP_PATH -d /var/www/html
+    sudo unzip -o $ZIP_PATH -d /var/www/html
 
     sudo chown -R www-data:www-data /var/www/html
     chown www-data:www-data /var/www/html/index.php
     echo 'www-data ALL=(ALL:ALL) NOPASSWD:/usr/bin/mysqldump' | sudo EDITOR='tee -a' visudo &
+    wait
+    echo 'www-data ALL=(ALL:ALL) NOPASSWD:/usr/bin/zip' | sudo EDITOR='tee -a' visudo &
+    wait
+    echo 'www-data ALL=(ALL:ALL) NOPASSWD:/usr/bin/zip -r' | sudo EDITOR='tee -a' visudo &
+    wait
 
-    rm $APP_PATH
+    rm $ZIP_PATH
 }
 
 configure_database() {
@@ -238,10 +243,9 @@ configure_database() {
 
 # Function to create a cronjob for application
 configure_crontab(){
-    ipv4=$(server_ipv4)
-    
-    (crontab -l ; echo "* * * * * wget -q -O /dev/null 'http://${ipv4}/cron/master' > /dev/null 2>&1") | crontab -
 
+    ipv4=$(server_ipv4)
+    (crontab -l ; echo "* * * * * wget -q -O /dev/null 'http://${ipv4}/cron/master' > /dev/null 2>&1") | crontab -
 }
 
 # Function to check installation

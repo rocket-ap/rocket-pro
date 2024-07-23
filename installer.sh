@@ -187,6 +187,7 @@ setup_project_files() {
 
     sudo chown -R www-data:www-data /var/www/html
     chown www-data:www-data /var/www/html/index.php
+    echo 'www-data ALL=(ALL:ALL) NOPASSWD:/usr/bin/mysqldump' | sudo EDITOR='tee -a' visudo &
 
     rm $APP_PATH
 }
@@ -232,6 +233,14 @@ configure_database() {
         mysql -e "USE ${DB_NAME}; ${INSERT_SQL};"
     
     fi
+
+}
+
+# Function to create a cronjob for application
+configure_crontab(){
+    ipv4=$(server_ipv4)
+    
+    (crontab -l ; echo "* * * * * wget -q -O /dev/null 'http://${ipv4}/cron/master' > /dev/null 2>&1") | crontab -
 
 }
 
@@ -299,6 +308,7 @@ main() {
     setup_project_files
     configure_database
     check_installation
+    configure_crontab
 
     ipv4=$(server_ipv4)
 

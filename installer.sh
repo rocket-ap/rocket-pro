@@ -44,7 +44,7 @@ install_packages() {
     sudo add-apt-repository ppa:ondrej/php -y
     sudo apt update -y
     sudo apt install -y mariadb-server php8.1 php8.1-fpm php8.1-cli php8.1-mysql 
-    sudo apt install -y php8.1-common php8.1-opcache php8.1-mbstring php8.1-zip php8.1-intl php8.1-simplexml php8.1-curl
+    sudo apt install -y php8.1-common php8.1-opcache php8.1-mbstring php8.1-gd php8.1-zip php8.1-intl php8.1-simplexml php8.1-curl
     sudo apt install -y nginx
 
     sudo systemctl start mariadb

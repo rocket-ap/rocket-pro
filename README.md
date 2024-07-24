@@ -5,6 +5,9 @@
 </p> 
 <h1 align="center"/>Rocket</h1>
 <h6 align="center">Professional version of Rocket<h6>
+<p align="center">
+<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/rocket-ap/rocket-pro">
+</p>
 </p>
 
 # راکت نسخه حرفه ای 

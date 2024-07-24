@@ -8,7 +8,7 @@
 <p align="center">
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/rocket-ap/rocket-pro/total">
 <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/rocket-ap/rocket-pro">
-<img alt="Telegram Channel" src="https://img.shields.io/endpoint?style=flat&url=https://runkit.io/damiankrawczyk/telegram-badge/branches/master?url=https://t.me/rocketpanel&color=green">
+<img alt="Telegram Channel" src="https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https://tg.sumanjay.workers.dev/rocketpanel&color=blue">
 </p>
 </p>
 

@@ -35,3 +35,8 @@ bash <(curl -Ls https://raw.githubusercontent.com/rocket-ap/rocket-pro/master/in
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/rocket-ap/rocket-pro/master/ssl.sh --ipv4)
 ```
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/rocket-ap/rocket-pro.svg)](https://starchart.cc/rocket-ap/rocket-pro)

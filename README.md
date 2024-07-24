@@ -19,7 +19,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/rocket-ap/rocket-pro/master/in
 ```
 
 
-# SSL
+# اس اس ال
 
 جهت نصب SSL از طریق لینک زیر عمل کنید<br>
 

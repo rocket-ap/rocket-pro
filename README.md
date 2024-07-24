@@ -3,7 +3,7 @@
 <img width="160" height="160"  alt="Rocket" src="https://raw.githubusercontent.com/rocket-ap/rocket-pro/main/images/logo.png">
 </picture>
 </p> 
-<h1 align="center"/>Rocket</h1>
+<h1 align="center"/>Rocket Pro</h1>
 <h6 align="center">Professional version of Rocket<h6>
 <p align="center">
 <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/rocket-ap/rocket-pro/total">

@@ -6,7 +6,9 @@
 <h1 align="center"/>Rocket</h1>
 <h6 align="center">Professional version of Rocket<h6>
 <p align="center">
+<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/rocket-ap/rocket-pro/total">
 <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/rocket-ap/rocket-pro">
+<img alt="Telegram Channel" src="https://img.shields.io/endpoint?label=Channel&style=flat-square&url=https://tg.sumanjay.workers.dev/rocketpanel&color=green">
 </p>
 </p>
 

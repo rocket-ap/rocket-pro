@@ -1,5 +1,5 @@
-# نسخه حرفه ای مدیریت کاربران راکت
-Ther professional version of rocket ssh
+# راکت نسخه حرفه ای 
+نسخه حرفه ای مدیریت کاربران راکت
 
 # Install
 
